@@ -1,6 +1,6 @@
 #include <iostream>
-#include "DataPrep.hpp"
-#include "PhysicsEngine.hpp"
+#include "header/DataPrep.hpp"
+#include "header/PhysicsEngine.hpp"
 #include "header/ComponentAnalyzer.hpp"
 #include "header/CostCalculator.hpp"
 #include "header/Comparator.hpp"
