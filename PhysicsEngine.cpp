@@ -28,9 +28,9 @@ void PhysicsEngine()//don't change this line
   userFile.close();
 
   // Calculate velocity of fluid
-  radius = diamter/2
-  veloctiy = FlowRate / (M_PI * (pow(radius,2)))
-    
+  radius = diameter/2;
+  velocity = FlowRate / (M_PI * (pow(radius,2)));
+
   // Calculate Reynolds Number
   reynolds = (density * velocity * diameter)/viscosity;
 
@@ -40,7 +40,7 @@ void PhysicsEngine()//don't change this line
     // Laminar flow
     frictionFactor = 64 / reynolds;
 
-  } 
+  }
   else {
 
   // Turbulent flow (Colebrook equation)
@@ -63,10 +63,10 @@ void PhysicsEngine()//don't change this line
         frictionFactor = newFriction;
 
     } while (error > 0.000001);
-
+  }
   // Major Head Loss
-  headloss = 
-    frictionFactor * (length / diameter) * (pow(velocity,2)) / (2 * g)
+  headLoss =
+    frictionFactor * (length / diameter) * (pow(velocity,2)) / (2 * g);
 
   // Write output file
   ofstream outputFile("physics_results.txt");
@@ -76,6 +76,7 @@ void PhysicsEngine()//don't change this line
   outputFile << headLoss << endl;
   outputFile.close();
   // Program end
-  return 0;
+  return;
   //Paste or type code here
 }
+
