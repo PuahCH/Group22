@@ -1,6 +1,5 @@
-#include "header/Comparator.hpp"//don't change this line
 #include <fstream>//don't change this line
-//include any other necessary headers like iostream,cmath ect.
+#include "header/Comparator.hpp"//include any other necessary headers like iostream,cmath ect above this line
 void Comparator()//don't change this line
 {
 //Paste or type code here
