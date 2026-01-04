@@ -179,3 +179,13 @@ if data:
 
 else:
     pass
+
+try:
+    os.remove("user_input.txt")
+    os.remove("user_fittings.txt")
+    os.remove("final_recommendation.txt")
+    os.remove("physics_results.txt")
+    os.remove("clean_data.txt")
+    os.remove("total_loss.txt")
+except:
+    pass 
