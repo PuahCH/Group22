@@ -10,7 +10,7 @@ def get_all_simulation_inputs():
     window.title("Pipe Simulation Dashboard")
     window.geometry("500x700") 
     
-    fluid_var = tk.StringVar(value="water") 
+    fluid_var = tk.StringVar(value="Water") 
     temp_var = tk.DoubleVar(value=20.0)
     
     def submit():
@@ -53,9 +53,9 @@ def get_all_simulation_inputs():
     f_frame.pack()
     frame_fluid = tk.Frame(window)
     frame_fluid.pack()
-    tk.Radiobutton(frame_fluid, text="Water", variable=fluid_var, value="water").pack(side="left", padx=10)
-    tk.Radiobutton(frame_fluid, text="Oil", variable=fluid_var, value="oil").pack(side="left", padx=10)
-    tk.Radiobutton(frame_fluid, text="Air", variable=fluid_var, value="air").pack(side="left", padx=10)
+    tk.Radiobutton(frame_fluid, text="Water", variable=fluid_var, value="Water").pack(side="left", padx=10)
+    tk.Radiobutton(frame_fluid, text="Oil", variable=fluid_var, value="Oil").pack(side="left", padx=10)
+    tk.Radiobutton(frame_fluid, text="Air", variable=fluid_var, value="Air").pack(side="left", padx=10)
     tk.Frame(window, height=1, bg="lightgrey").pack(fill="x", pady=5, padx=20)
 
     tk.Label(window, text="2. Temperature (C)", font=("Arial", 10, "bold")).pack(pady=5)
