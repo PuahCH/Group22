@@ -12,6 +12,13 @@ void CostCalculator()//don't change this line
     double cost;
     double maxPressure;
 
+    //Defines the function interfaces for cost calculations
+    double purchaseCost;
+    double pumpPower_kW;
+    double annualEnergyCost;
+    double pumpPower;
+    double annualEnergyCost;
+    double tenYearCost;
     
     double pipelength;
     cout << "Please enter the length of the pipe: "<<endl;
@@ -57,21 +64,21 @@ void CostCalculator()//don't change this line
     // Calculations
 
     // Purchase Cost
-    double purchaseCost = cost * pipeLength;
+    purchaseCost = cost * pipeLength;
 
     // Convert to kW
-    double pumpPower_kW = pumpPower / 1000.0;
+    pumpPower_kW = pumpPower / 1000.0;
     // Annual Energy Cost
-    double annualEnergyCost = pumpPower_kW * 24 * 365 * electricityPrice;
+    annualEnergyCost = pumpPower_kW * 24 * 365 * electricityPrice;
   
     // Pump Power (W)
-    double pumpPower = (fluidDensity * gravity * flowRate * totalHeadLoss) / pumpEfficiency;
+    pumpPower = (fluidDensity * gravity * flowRate * totalHeadLoss) / pumpEfficiency;
 
     // Annual Energy Cost
-    double annualEnergyCost = pumpPower_kW * 24 * 365 * electricityPrice;
+    annualEnergyCost = pumpPower_kW * 24 * 365 * electricityPrice;
 
     // 10-Year total lifecycle cost
-    double tenYearCost = purchaseCost + (annualEnergyCost * 10);
+    tenYearCost = purchaseCost + (annualEnergyCost * 10);
 
     
     ofstream reportFile("financial_report.txt");
