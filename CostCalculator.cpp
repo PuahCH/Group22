@@ -7,7 +7,7 @@ void CostCalculator()//don't change this line
     double totalHeadLoss;
     double totalPressureDrop;
     double roughness;
-    double density;
+    double fluidDensity;
     double viscosity;
     double cost;
     double maxPressure;
@@ -19,19 +19,29 @@ void CostCalculator()//don't change this line
     double pumpPower;
     double annualEnergyCost;
     double tenYearCost;
-    
-    double pipelength;
-    cout << "Please enter the length of the pipe: "<<endl;
-    cin >> pipelength;
-  
+
+    //Variables from user input file
+    double flowRate;
+    double pipeLength;
+
     // Fixed constant
-    double fluidDensity = 1000.0; 
     double gravity = 9.81;   
   
-    //Assumption valuue
-    double flowRate = 0.01;  //Assume                
+    //Assumption valuue                 
     double pumpEfficiency = 1; //Assume 100% pump efficiency
     double electricityPrice = 0.50; // RM/kWh  
+    
+    //Read user_input.txt
+    ifstream userinputFile("user_input.txt");
+    if (!userinputFile)
+    {
+        cout << "Error: Cannot open user_input.txt" << endl;
+        return;
+    }
+
+    userinputFile >> flowRate;
+    userinputFile >> pipeLength;
+    userinputFile.close();
 
     // Read total_loss.txt
     ifstream totalLossFile("total_loss.txt");
@@ -54,9 +64,9 @@ void CostCalculator()//don't change this line
         return;
     }
 
-    cleanDataFile >> roughness;
-    cleanDataFile >> density;
     cleanDataFile >> viscosity;
+    cleanDataFile >> fluidDensity;
+    cleanDataFile >> roughness;
     cleanDataFile >> cost;
     cleanDataFile >> maxPressure;
     cleanDataFile.close();
