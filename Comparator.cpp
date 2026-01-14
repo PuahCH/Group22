@@ -52,14 +52,14 @@ void Comparator()//don't change this line
 
     if (results.size() < 3) {
         cout << "Comparator Error: Not enough data to rank materials." << endl;
-        return;
+        
     }
 
     // Write final recommendation file
     ofstream out("final_recommendation.txt");
     if (!out.is_open()) {
         cout << "Comparator Error: Cannot create final_recommendation.txt" << endl;
-        return;
+       
     }
 
     // Top 3 Buying Prices
