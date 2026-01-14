@@ -20,7 +20,15 @@ int main() {
     for(int i = 0; i<size(material);i++){
     DataPrep(material[i]);
     PhysicsEngine();
-    ComponentAnalyzer();
+    bool safety = ComponentAnalyzer();
+
+    if ( safety == false){
+        clearFile("clean_data.txt");
+        clearFile("physic_results.txt");
+        clearFile("total_loss.txt");
+        continue;
+    }
+        
     CostCalculator();
     archivename = material[i] + "_financial_report.txt";
     if (fs::exists("financial_report.txt")) {
