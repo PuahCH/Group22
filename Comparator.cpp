@@ -26,7 +26,7 @@ void Comparator()//don't change this line
         ifstream file(filename);
 
         if (!file.is_open()) {
-            continue; // skip if financial_report doesnt exist
+            continue; // skip disqualified material
         }
 
         MaterialData data;
