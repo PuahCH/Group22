@@ -1,5 +1,6 @@
 #include <ifstream>//don't change this line
 #include "header/CostCalculator.hpp"//include any other necessary headers like iostream,cmath ect above this line
+using namespace std;
 void CostCalculator()//don't change this line
 {
     // Variables from input files
