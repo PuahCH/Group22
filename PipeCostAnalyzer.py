@@ -210,5 +210,6 @@ try:
     os.remove("physics_results.txt")
     os.remove("clean_data.txt")
     os.remove("total_loss.txt")
+    os.remove("financial_report.txt")
 except:
     pass
