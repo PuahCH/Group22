@@ -5,6 +5,9 @@ import sys
 import tkinter as tk
 from tkinter import messagebox
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
+
 def get_all_simulation_inputs():
     window = tk.Tk()
     window.title("Pipe Simulation Dashboard")
