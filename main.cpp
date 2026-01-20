@@ -24,7 +24,7 @@ int main() {
 
     if ( safety == false){
         clearFile("clean_data.txt");
-        clearFile("physic_results.txt");
+        clearFile("physics_results.txt");
         clearFile("total_loss.txt");
         continue;
     }
@@ -36,7 +36,7 @@ int main() {
     else {
             cout<< "Error: financial_report.txt was not found for " << material[i] << endl;}
         clearFile("clean_data.txt");
-        clearFile("physic_results.txt");
+        clearFile("physics_results.txt");
         clearFile("total_loss.txt");
         clearFile("financial_report.txt");
     }
