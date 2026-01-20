@@ -77,7 +77,7 @@ void PhysicsEngine()//don't change this line
   outputFile << headLoss << endl;
   outputFile.close();
   // Program end
-  return;
+  return 0;
   //Paste or type code here
 }
 
